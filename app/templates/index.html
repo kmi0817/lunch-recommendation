@@ -10,6 +10,34 @@
     <title>점심 추천</title>
 </head>
 <body>
-    <h3>INDEX</h3>
+    <div class="container">
+        <h2 class="my-4"><a href="/" class="text-dark" style="text-decoration: none;">단국대 점심 추천</a></h2>
+        <div class="d-flex justify-content-center">
+            <!-- <form action="/" method="POST"> -->
+            <form>
+                <!-- <div class="form-check form-switch">
+                    <input id="package_included" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">배달 포함</label>
+                </div> -->
+                <button type="button" id="btn" class="btn btn-outline-primary">오늘의 점심은?</button>
+            </form>
+        </div>
+        <div class="d-flex justify-content-center">
+            <h3 id="choice" class="mt-4"></h3>
+        </div>
+
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function() {
+            let menus = [
+                "손칼국수", "마피아떡볶이", "해피덮", "빨강파이프", "고래심줄",
+                "미소야", "알촌", "밥이라면", "홍춘", "산골막창", "브라더양식당",
+                "쭈꾸미와삼겹살", "선영이네", "고수찜닭", "내가찜한닭",
+                '노브랜드 버거', '한솥', '에그드랍', 'KFC', '서브웨이'
+            ]
+            const index = Math.floor(Math.random() * menus.length);
+            document.getElementById("choice").innerHTML = menus[index];
+        });
+    </script>
 </body>
 </html>
